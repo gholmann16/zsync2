@@ -56,7 +56,7 @@ struct rcksum_state *rcksum_init(zs_blockid nblocks, size_t blocksize,
 
     /* Temporary file to hold the target file as we get blocks for it */
     static const char template[] = "rcksum-XXXXXX";
-    if (directory != NULL) {strdup("rcksum-XXXXXX");
+    if (directory != NULL) {
         rs->filename = (char*) calloc(strlen(directory) + strlen(template) + 2, sizeof(char));
         strcat(rs->filename, directory);
         strcat(rs->filename, "/");
